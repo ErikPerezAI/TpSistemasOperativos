@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistemas Operativos - Guía Educativa Completa</title>
+    <meta
+      name="description"
+      content="Aprende sobre sistemas operativos: conceptos, tipos, gestión de procesos, memoria, archivos y más. Guía educativa moderna y completa."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header" class="header">
+      <nav class="nav-container">
+        <div class="nav-content">
+          <div class="nav-logo">
+            <span class="logo-text">Sistemas Operativos</span>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="nav-links desktop-nav">
+            <a href="#hero" class="nav-link">Inicio</a>
+            <a href="#concepto" class="nav-link">Conceptos</a>
+            <a href="#tipos" class="nav-link">Tipos</a>
+            <a href="#componentes" class="nav-link">Componentes</a>
+            <a href="#gestion" class="nav-link">Gestión</a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobileNav">
+          <a href="#hero" class="nav-link">Inicio</a>
+          <a href="#concepto" class="nav-link">Conceptos</a>
+          <a href="#tipos" class="nav-link">Tipos</a>
+          <a href="#componentes" class="nav-link">Componentes</a>
+          <a href="#gestion" class="nav-link">Gestión</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-pattern"></div>
+      <div class="section-container hero-content">
+        <h1 class="hero-title">
+          Explorando los <span class="gradient-text">Sistemas Operativos</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Descubre cómo funcionan los sistemas que hacen posible la interacción
+          entre el hardware y el software
+        </p>
+
+        <button class="btn-primary" onclick="scrollToSection('#concepto')">
+          Comenzar a Aprender
+          <i data-lucide="arrow-right"></i>
+        </button>
+
+        <div class="hero-image">
+          <div class="hero-image-overlay"></div>
+          <img
+            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&h=675&fit=crop"
+            alt="Sistema Operativo Ilustración"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Concept Section -->
+    <section id="concepto" class="section-container concept-section">
+      <div class="section-header">
+        <h2 class="section-title">
+          ¿Qué es un <span class="gradient-text">Sistema Operativo</span>?
+        </h2>
+        <p class="section-subtitle">
+          Un Sistema Operativo (SO) es el software fundamental que gestiona el
+          hardware de una computadora y proporciona servicios esenciales para
+          los programas de aplicación.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="tech-card">
+          <div class="card-icon">
+            <i data-lucide="monitor"></i>
+          </div>
+          <h3>Intermediario</h3>
+          <p>Actúa como puente entre el hardware y las aplicaciones</p>
+        </div>
+
+        <div class="tech-card">
+          <div class="card-icon">
+            <i data-lucide="layers"></i>
+          </div>
+          <h3>Gestor de Recursos</h3>
+          <p>Administra CPU, memoria, almacenamiento y periféricos</p>
+        </div>
+
+        <div class="tech-card">
+          <div class="card-icon">
+            <i data-lucide="cpu"></i>
+          </div>
+          <h3>Coordinador</h3>
+          <p>Ejecuta múltiples programas simultáneamente</p>
+        </div>
+
+        <div class="tech-card">
+          <div class="card-icon">
+            <i data-lucide="hard-drive"></i>
+          </div>
+          <h3>Protector</h3>
+          <p>Garantiza seguridad y aislamiento entre procesos</p>
+        </div>
+      </div>
+
+      <div class="tech-card large-card">
+        <h3 class="card-title-primary">Funciones Principales</h3>
+        <div class="function-list">
+          <div class="function-item">
+            <div class="bullet"></div>
+            <p>
+              <strong>Gestión de Procesos:</strong> Controla la creación,
+              ejecución y terminación de procesos, asignando tiempo de CPU de
+              manera eficiente.
+            </p>
+          </div>
+          <div class="function-item">
+            <div class="bullet"></div>
+            <p>
+              <strong>Gestión de Memoria:</strong> Administra la memoria RAM,
+              asignándola dinámicamente a los procesos que la necesitan y
+              liberándola cuando ya no es necesaria.
+            </p>
+          </div>
+          <div class="function-item">
+            <div class="bullet"></div>
+            <p>
+              <strong>Gestión de Archivos:</strong> Organiza, almacena y
+              recupera información en dispositivos de almacenamiento mediante
+              sistemas de archivos.
+            </p>
+          </div>
+          <div class="function-item">
+            <div class="bullet"></div>
+            <p>
+              <strong>Gestión de E/S:</strong> Coordina la comunicación entre el
+              sistema y los dispositivos de entrada/salida como teclados,
+              monitores, impresoras, etc.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Types Section -->
+    <section id="tipos" class="section-container types-section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="gradient-text">Tipos</span> de Sistemas Operativos
+        </h2>
+        <p class="section-subtitle">
+          Los sistemas operativos se clasifican según su propósito, arquitectura
+          y casos de uso específicos
+        </p>
+      </div>
+
+      <div class="types-grid">
+        <div class="tech-card">
+          <div class="card-icon blue">
+            <i data-lucide="monitor"></i>
+          </div>
+          <h3>Sistemas de Escritorio</h3>
+          <p class="type-examples">Windows, macOS, Linux Ubuntu</p>
+          <p class="type-description">
+            Diseñados para uso personal en computadoras de escritorio y
+            portátiles. Ofrecen interfaces gráficas amigables y soporte para una
+            amplia variedad de aplicaciones.
+          </p>
+        </div>
+
+        <div class="tech-card">
+          <div class="card-icon cyan">
+            <i data-lucide="server"></i>
+          </div>
+          <h3>Sistemas de Servidor</h3>
+          <p class="type-examples">Windows Server, Linux Server, Unix</p>
+          <p class="type-description">
+            Optimizados para gestionar múltiples usuarios simultáneos, manejar
+            grandes volúmenes de datos y proporcionar servicios de red
+            confiables y seguros.
+          </p>
+        </div>
+
+        <div class="tech-card">
+          <div class="card-icon purple">
+            <i data-lucide="smartphone"></i>
+          </div>
+          <h3>Sistemas Móviles</h3>
+          <p class="type-examples">Android, iOS, HarmonyOS</p>
+          <p class="type-description">
+            Especialmente diseñados para dispositivos móviles como smartphones y
+            tablets. Priorizan eficiencia energética, pantallas táctiles y
+            conectividad inalámbrica.
+          </p>
+        </div>
+
+        <div class="tech-card">
+          <div class="card-icon orange">
+            <i data-lucide="clock"></i>
+          </div>
+          <h3>Sistemas en Tiempo Real</h3>
+          <p class="type-examples">QNX, VxWorks, FreeRTOS</p>
+          <p class="type-description">
+            Utilizados en aplicaciones críticas donde el tiempo de respuesta es
+            crucial, como sistemas médicos, control industrial, automóviles y
+            aeronáutica.
+          </p>
+        </div>
+      </div>
+
+      <div class="tech-card classification-card">
+        <h3 class="card-title-primary">Otras Clasificaciones</h3>
+        <div class="classification-grid">
+          <div>
+            <h4>Por Número de Usuarios</h4>
+            <ul class="classification-list">
+              <li>
+                <strong>Monousuario:</strong> Permite un usuario a la vez
+                (MS-DOS)
+              </li>
+              <li>
+                <strong>Multiusuario:</strong> Múltiples usuarios simultáneos
+                (Linux, Unix)
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4>Por Número de Tareas</h4>
+            <ul class="classification-list">
+              <li><strong>Monotarea:</strong> Ejecuta un programa a la vez</li>
+              <li>
+                <strong>Multitarea:</strong> Ejecuta múltiples programas
+                simultáneamente
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Components Section -->
+    <section id="componentes" class="section-container components-section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="gradient-text">Componentes</span> Fundamentales
+        </h2>
+      </div>
+
+      <!-- Kernel -->
+      <div class="tech-card kernel-card">
+        <div class="card-header-flex">
+          <div class="card-icon cyan">
+            <i data-lucide="cpu"></i>
+          </div>
+          <div>
+            <h3 class="large-title">Kernel (Núcleo)</h3>
+            <p class="subtitle-muted">El corazón del sistema operativo</p>
+          </div>
+        </div>
+
+        <p class="description">
+          El <strong>kernel</strong> es el componente central del sistema
+          operativo. Es el software que tiene control completo sobre todo en el
+          sistema. Actúa como intermediario entre el hardware y el software de
+          aplicación, gestionando recursos del sistema y proporcionando
+          servicios esenciales.
+        </p>
+
+        <div class="kernel-types">
+          <div class="kernel-type">
+            <h4>Kernel Monolítico</h4>
+            <p>
+              Todo el SO corre en modo kernel. Mayor rendimiento pero menos
+              modular. Ejemplo: Linux
+            </p>
+          </div>
+          <div class="kernel-type">
+            <h4>Microkernel</h4>
+            <p>
+              Solo funciones básicas en kernel. Más estable y seguro. Ejemplo:
+              Minix, QNX
+            </p>
+          </div>
+          <div class="kernel-type">
+            <h4>Kernel Híbrido</h4>
+            <p>
+              Combina ambos enfoques. Balance entre rendimiento y modularidad.
+              Ejemplo: Windows NT
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="components-grid">
+        <!-- Firmware -->
+        <div class="tech-card">
+          <div class="card-header-flex-small">
+            <div class="card-icon blue">
+              <i data-lucide="settings"></i>
+            </div>
+            <h3>Firmware</h3>
+          </div>
+          <p class="description">
+            Software de bajo nivel grabado en chips de memoria no volátil.
+            Proporciona control básico del hardware y permite la comunicación
+            inicial entre componentes físicos.
+          </p>
+          <ul class="feature-list">
+            <li>Reside en ROM, EEPROM o memoria flash</li>
+            <li>Ejecuta instrucciones al encender el dispositivo</li>
+            <li>Ejemplos: BIOS, UEFI, firmware de routers</li>
+          </ul>
+        </div>
+
+        <!-- BIOS y UEFI -->
+        <div class="tech-card">
+          <div class="card-header-flex-small">
+            <div class="card-icon purple">
+              <i data-lucide="power"></i>
+            </div>
+            <h3>BIOS y UEFI</h3>
+          </div>
+          <div class="bios-content">
+            <div>
+              <h4 class="bios-title">BIOS (Basic Input/Output System)</h4>
+              <p>
+                Firmware tradicional que inicializa el hardware durante el
+                arranque y carga el sistema operativo. Limitado a discos de 2TB
+                y modo 16 bits.
+              </p>
+            </div>
+            <div>
+              <h4 class="bios-title">
+                UEFI (Unified Extensible Firmware Interface)
+              </h4>
+              <p>
+                Sucesor moderno de BIOS. Soporta discos mayores a 2TB, arranque
+                más rápido, interfaz gráfica, mejor seguridad con Secure Boot y
+                modo 32/64 bits.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Partición de Disco -->
+      <div class="tech-card">
+        <div class="card-header-flex-small">
+          <div class="card-icon orange">
+            <i data-lucide="hard-drive"></i>
+          </div>
+          <h3>Partición de Disco</h3>
+        </div>
+        <p class="description">
+          Una <strong>partición</strong> es una división lógica del espacio de
+          almacenamiento en un disco duro o SSD. Permite instalar múltiples
+          sistemas operativos, organizar datos y mejorar el rendimiento.
+        </p>
+        <div class="partition-grid">
+          <div class="partition-type">
+            <h4>Partición Primaria</h4>
+            <p>
+              Puede contener un sistema operativo booteable. Máximo 4 en MBR
+            </p>
+          </div>
+          <div class="partition-type">
+            <h4>Partición Extendida</h4>
+            <p>
+              Contenedor para particiones lógicas. Permite superar el límite de
+              4 particiones
+            </p>
+          </div>
+          <div class="partition-type">
+            <h4>Partición Lógica</h4>
+            <p>Subdivisiones dentro de una partición extendida</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Management Section -->
+    <section id="gestion" class="section-container management-section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="gradient-text">Gestión</span> del Sistema
+        </h2>
+        <p class="section-subtitle">
+          El sistema operativo administra múltiples aspectos críticos para el
+          funcionamiento óptimo del sistema
+        </p>
+      </div>
+
+      <div class="management-grid">
+        <!-- Gestión de Procesos -->
+        <div class="tech-card">
+          <div class="card-header-flex-small">
+            <div class="card-icon blue">
+              <i data-lucide="cpu"></i>
+            </div>
+            <div>
+              <h3>Gestión de Procesos</h3>
+              <p class="subtitle-small">Control de la ejecución de programas</p>
+            </div>
+          </div>
+          <ul class="management-list">
+            <li>Creación, suspensión y terminación de procesos</li>
+            <li>Planificación de CPU (scheduling): FCFS, Round Robin, SJF</li>
+            <li>Sincronización y comunicación entre procesos</li>
+            <li>Manejo de hilos (threads) y multiprocesamiento</li>
+          </ul>
+        </div>
+
+        <!-- Gestión de Memoria -->
+        <div class="tech-card">
+          <div class="card-header-flex-small">
+            <div class="card-icon cyan">
+              <i data-lucide="database"></i>
+            </div>
+            <div>
+              <h3>Gestión de Memoria</h3>
+              <p class="subtitle-small">Administración eficiente de RAM</p>
+            </div>
+          </div>
+          <ul class="management-list">
+            <li>Asignación y liberación de memoria a procesos</li>
+            <li>Memoria virtual y paginación</li>
+            <li>Segmentación de memoria</li>
+            <li>Prevención de fragmentación</li>
+          </ul>
+        </div>
+
+        <!-- Gestión de E/S -->
+        <div class="tech-card">
+          <div class="card-header-flex-small">
+            <div class="card-icon purple">
+              <i data-lucide="printer"></i>
+            </div>
+            <div>
+              <h3>Gestión de E/S</h3>
+              <p class="subtitle-small">Coordinación de dispositivos</p>
+            </div>
+          </div>
+          <ul class="management-list">
+            <li>Drivers de dispositivos</li>
+            <li>Buffering y spooling</li>
+            <li>Caching de datos</li>
+            <li>Manejo de interrupciones</li>
+          </ul>
+        </div>
+
+        <!-- Gestión de Archivos -->
+        <div class="tech-card">
+          <div class="card-header-flex-small">
+            <div class="card-icon orange">
+              <i data-lucide="folder-open"></i>
+            </div>
+            <div>
+              <h3>Gestión de Archivos</h3>
+              <p class="subtitle-small">Organización de información</p>
+            </div>
+          </div>
+          <ul class="management-list">
+            <li>Sistemas de archivos: FAT, NTFS, ext4, APFS</li>
+            <li>Operaciones: crear, leer, escribir, eliminar</li>
+            <li>Control de acceso y permisos</li>
+            <li>Directorios y rutas</li>
+          </ul>
+        </div>
+
+        <!-- Seguridad y Protección -->
+        <div class="tech-card">
+          <div class="card-header-flex-small">
+            <div class="card-icon red">
+              <i data-lucide="shield"></i>
+            </div>
+            <div>
+              <h3>Seguridad y Protección</h3>
+              <p class="subtitle-small">Salvaguardar datos y recursos</p>
+            </div>
+          </div>
+          <ul class="management-list">
+            <li>Autenticación de usuarios</li>
+            <li>Control de acceso (ACL)</li>
+            <li>Cifrado de datos</li>
+            <li>Protección contra malware y ataques</li>
+          </ul>
+        </div>
+
+        <!-- Comunicaciones -->
+        <div class="tech-card">
+          <div class="card-header-flex-small">
+            <div class="card-icon green">
+              <i data-lucide="network"></i>
+            </div>
+            <div>
+              <h3>Comunicaciones</h3>
+              <p class="subtitle-small">Manejo de redes</p>
+            </div>
+          </div>
+          <ul class="management-list">
+            <li>Protocolos TCP/IP</li>
+            <li>Sockets y APIs de red</li>
+            <li>Servicios de red: DNS, DHCP</li>
+            <li>Seguridad de red: firewalls</li>
+          </ul>
+        </div>
+
+        <!-- Gestión de Recursos -->
+        <div class="tech-card">
+          <div class="card-header-flex-small">
+            <div class="card-icon yellow">
+              <i data-lucide="gauge"></i>
+            </div>
+            <div>
+              <h3>Gestión de Recursos</h3>
+              <p class="subtitle-small">Optimización del uso de recursos</p>
+            </div>
+          </div>
+          <ul class="management-list">
+            <li>Monitoreo de rendimiento</li>
+            <li>Balanceo de carga</li>
+            <li>Gestión de energía</li>
+            <li>Priorización de tareas</li>
+          </ul>
+        </div>
+
+        <!-- Interfaz con el Usuario -->
+        <div class="tech-card">
+          <div class="card-header-flex-small">
+            <div class="card-icon indigo">
+              <i data-lucide="user"></i>
+            </div>
+            <div>
+              <h3>Interfaz con el Usuario</h3>
+              <p class="subtitle-small">Medios de interacción</p>
+            </div>
+          </div>
+          <ul class="management-list">
+            <li>GUI (Interfaz Gráfica): Windows, macOS, GNOME, KDE</li>
+            <li>CLI (Línea de Comandos): Bash, PowerShell, CMD</li>
+            <li>Accesibilidad y personalización</li>
+            <li>Gestión de ventanas y escritorios</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Servicios del SO -->
+      <div class="tech-card services-card">
+        <h3 class="services-title">
+          <span class="gradient-text">Servicios del Sistema Operativo</span>
+        </h3>
+        <p class="services-description">
+          Los servicios son funcionalidades que el SO proporciona a las
+          aplicaciones y usuarios para facilitar el uso eficiente del hardware y
+          simplificar el desarrollo de software.
+        </p>
+        <div class="services-grid">
+          <div class="service-item">
+            <div class="bullet"></div>
+            <div>
+              <strong>Ejecución de Programas:</strong>
+              <span> Carga y ejecución de aplicaciones</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <div class="bullet"></div>
+            <div>
+              <strong>Operaciones de E/S:</strong>
+              <span> Acceso a dispositivos periféricos</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <div class="bullet"></div>
+            <div>
+              <strong>Manipulación de Archivos:</strong>
+              <span> Lectura, escritura y gestión</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <div class="bullet"></div>
+            <div>
+              <strong>Detección de Errores:</strong>
+              <span> Monitoreo y manejo de fallos</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <div class="bullet"></div>
+            <div>
+              <strong>Comunicaciones:</strong>
+              <span> Intercambio de datos entre procesos</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <div class="bullet"></div>
+            <div>
+              <strong>Asignación de Recursos:</strong>
+              <span> Distribución equitativa</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <div class="bullet"></div>
+            <div>
+              <strong>Contabilidad:</strong>
+              <span> Registro de uso de recursos</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <div class="bullet"></div>
+            <div>
+              <strong>Protección y Seguridad:</strong>
+              <span> Acceso controlado a recursos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="section-container footer-content">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-logo">
+              <span class="logo-text">Sistemas Operativos</span>
+            </div>
+            <p class="footer-description">
+              Plataforma educativa dedicada a la enseñanza de conceptos
+              fundamentales de sistemas operativos.
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2025 Erik Nicolas Perez Poo.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
